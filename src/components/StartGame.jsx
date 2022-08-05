@@ -1,5 +1,5 @@
 function StartGame(props) {
-  
+
   return (
     <div className="start-game-container">
       <h1 className="start-game-title">Video Games Quiz!</h1>
