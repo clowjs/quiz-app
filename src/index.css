@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Inter, sans-serif;
@@ -24,18 +25,21 @@ body {
 }
 
 .btn {
-  min-width: 100px;
-  padding: 18px 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
   font-weight: 600;
   color: #F5F7FB;
   font-size: 10px;
-  line-height: 12px;
   border: none;
   border-radius: 15px;
   background: #4D5B9E;
   height: 35px;
+  width: 120px;
   cursor: pointer;
-
+  border-radius: 10px;
 }
 
 .btn:active {
@@ -73,4 +77,47 @@ body {
   line-height: 19px;
   min-width: 193px;
   height: 52px;
+}
+
+.game-container {
+  margin: 40px 75px;
+  width: 550px;
+}
+
+.question-container {
+  margin: 15px 0;
+  border-bottom: 0.8px solid #DBDEF0;
+}
+
+.question-answers {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.question-answer {
+  background-color: #F5F7FB;
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 500;
+  min-width: 60px;
+  margin-right: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  border-radius: 10px;
+  border: 0.8px solid #4D5B9E;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #D6DBF5;
+  color: #293264;
+  border: 1px solid #D6DBF5;
 }

@@ -6,7 +6,6 @@ function App() {
   const [started, setStarted] = useState(false)
 
   function startGame() {
-    console.log("Started game")
     setStarted(true)
   }
 
