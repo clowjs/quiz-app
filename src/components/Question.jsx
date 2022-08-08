@@ -1,13 +1,17 @@
-function Question() {
+import { nanoid } from "nanoid"
+import { decode } from "he"
+
+function Question(props) {
+
+  const answersList = props.question.answers.map(answer => {
+    return <li key={nanoid()} className="question-answer">{decode(answer.answer)}</li>
+  })
 
   return (
     <div className="question-container">
-      <h1 className="question-question">Question!</h1>
+      <h1 className="question-question">{decode(props.question.question)}</h1>
       <ul className="question-answers">
-        <li className="question-answer">Italy</li>
-        <li className="question-answer">Portugal</li>
-        <li className="question-answer selected">Transformers</li>
-        <li className="question-answer">Cabbage Patch Kids</li>
+        {answersList}
       </ul>
     </div>
   )
